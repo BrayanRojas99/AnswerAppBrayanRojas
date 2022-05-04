@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnswerAppBrayanRojas.Views.UserRegisterPage">
+    <ContentPage.Content>
+        <StackLayout Padding="50,0,50,0" VerticalOptions="Center">
+            <Entry x:Name="TxtUserName"  Placeholder="Email" TextTransform="Lowercase" FontSize="Large" TextColor="White"/>
+            <Entry x:Name="TxtFisrtName" Placeholder="First Name" TextTransform="Uppercase" FontSize="Large" TextColor="White"/>
+            <Entry x:Name="TxtLastName" Placeholder="Last Name" TextTransform="Uppercase" FontSize="Large" TextColor="White"/>
+            <Entry x:Name="TxtPhoneNumber" Placeholder="Phone Number" Keyboard="Numeric" FontSize="Large" TextColor="White"/>
+            <Entry x:Name="TxtPassword" Placeholder="Password"  IsPassword="True" FontSize="Large" TextColor="White"/>
+            <Switch x:Name="SwSeePassword" IsToggled="false" Toggled="CmdSeePassword"/>
+            <Entry x:Name="TxtBackUpEmail" Placeholder="Backup Email" TextTransform="Lowercase" FontSize="Large" TextColor="White"/>
+            <Entry x:Name="TxtJobDescription" Placeholder="Job Description" TextTransform="Uppercase" FontSize="Large" TextColor="White"/>
+            <Picker x:Name="CboUserRole" Title="Select a User Role" TitleColor="Aqua"
+                    ItemDisplayBinding="{Binding UserRole1}" SelectedIndex="{Binding UserRoleId}">
+                
+            </Picker>
+            <FlexLayout>
+                <Button x:Name="BtnAdd" VerticalOptions="Center" Text="Add" FontSize="Large" CornerRadius="15" TextColor="White" BackgroundColor="DarkGreen" BorderColor="White" BorderWidth="1" Clicked="BtnAdd_Clicked"/>
+                <Button x:Name="BtnCancel" VerticalOptions="Center" Text="Register" FontSize="Medium" CornerRadius="15" BackgroundColor="#59CF35" BorderColor="White" BorderWidth="1" Clicked="CmdCancelRegister"/>
+            </FlexLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

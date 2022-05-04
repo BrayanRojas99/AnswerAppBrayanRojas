@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnswerAppBrayanRojas.Views.ActionsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <!--Existen varias formas de llegar a una solucion, en este caso usamos un grid
+                con botones para ofrecer al usuario funcionalidades del app
+                Tambien es perfectamente valido usar por ejemplo un + en la esquina inferior derecha
+                (significa un formato similar a google)-->
+
+                <!--grid de una fila y una columna-->
+
+                <Grid>
+                    <Label Text="Select an Action"
+                           VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="CenterAndExpand" 
+                           HorizontalTextAlignment="Center"
+                           FontSize="40"/>
+                    
+                    <FlexLayout Wrap="Wrap"
+                                JustifyContent="SpaceEvenly"
+                                Direction="Row"
+                                Padding="20,20,20,0"
+                                AlignContent="SpaceAround"
+                                BackgroundColor="Red"
+                                Margin="0,50,0,10">
+
+                        <Button x:Name="BtnViewMyQuestions" 
+                                Text="My Questions" 
+                                BackgroundColor="Aqua"
+                                TextColor="White"
+                                HeightRequest="150"
+                                WidthRequest="150"
+                                FontSize="20"
+                                HorizontalOptions="Center"
+                                CornerRadius="30"
+                                Margin="5,5,5,5"
+                                Clicked="BtnViewMyQuestions_Clicked"/>
+
+                        <Button x:Name="BtnAddMyQuestions" 
+                                Text="Add a Question" 
+                                BackgroundColor="Aqua"
+                                TextColor="White"
+                                HeightRequest="150"
+                                WidthRequest="150"
+                                FontSize="20"
+                                HorizontalOptions="Center"
+                                CornerRadius="30"
+                                Margin="5,5,5,5"/>
+
+                        <Button x:Name="BtnViewMyAnswers" 
+                                Text="My Answers" 
+                                BackgroundColor="Aqua"
+                                TextColor="White"
+                                HeightRequest="150"
+                                WidthRequest="150"
+                                FontSize="20"
+                                HorizontalOptions="Center"
+                                CornerRadius="30"
+                                Margin="5,5,5,5"/>
+
+                        <Button x:Name="BtnUserConfig" 
+                                Text="Config" 
+                                BackgroundColor="Aqua"
+                                TextColor="White"
+                                HeightRequest="150"
+                                WidthRequest="150"
+                                FontSize="20"
+                                HorizontalOptions="Center"
+                                CornerRadius="30"
+                                Margin="5,5,5,5"/>
+                        
+                    </FlexLayout>
+                </Grid>
+
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
